@@ -1,0 +1,64 @@
+.city-form{
+    color:antiquewhite;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+}
+.box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .city-form:first-child > .box { justify-items: flex-end; }
+
+  .city-form:last-child > .box { justify-items: flex-start;  }
+  
+.customInput{
+    height: 4em;
+    width: 100%;
+    margin: 0 2em;
+    background-color: transparent;
+    font-family: 'Abel', sans-serif;
+    color: antiquewhite;
+    border-color: antiquewhite;
+}
+.city-input{
+    font-family: 'Abel', sans-serif;
+    color:antiquewhite;
+    font-size: 1em;
+    text-align: center;
+}
+.city-input::placeholder{
+    color:antiquewhite;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+.auto-comp{
+    background-color: #161d30;
+    color: antiquewhite;
+}
+.auto-comp:hover, .auto-comp:active, .auto-comp:focus{
+    background-color: #2a6698;
+    font-family: 'Abel', sans-serif;
+    color: antiquewhite;
+}
+.geo{
+    height: 3em;
+    width: 2em;
+    cursor: pointer;
+}
+.input-btn{
+    background-color: #2a6698;
+    font-family: 'Oswald', sans-serif !important;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    color: antiquewhite;
+    border-style: none;
+    cursor: pointer;
+    padding: 0 2em;
+    border-radius: 35px;
+    font-size: 1em;
+    font-family: 'Carrois Gothic SC', sans-serif;
+}

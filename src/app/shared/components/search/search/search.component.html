@@ -1,0 +1,17 @@
+<form class="city-form">
+  <div class="box"><img src='assets/img/location.png' class="geo"(click)= clientLocation()></div>
+    <div class="box">  <mat-form-field class="customInput" appearance="fill">
+      <input class="city-input" type="text"
+             placeholder="Pick your city"
+             aria-label="City"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option class="auto-comp" *ngFor="let option of filteredOptions | async" [value]="option" (click)= acceptCity()>
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field></div>
+    <div class="box">  <button class="input-btn" type = button (click)= acceptCity()>Accept</button></div>
+  </form>

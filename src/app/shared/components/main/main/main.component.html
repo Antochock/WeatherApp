@@ -1,0 +1,16 @@
+<div *ngIf="loading else mainComponent"><div class="loader">Loading...</div></div>
+<ng-template #mainComponent>
+    <div class="main_info">
+        <h2>{{weathers$.name}}</h2>
+        <h1>{{weathers$.main.temp}}&#176;C</h1>
+        <h3>Feels like: {{weathers$.main.feels_like}}&#176;C</h3>
+        <img class="icon" [src]= srcIcon() alt="">
+        <p>Min temperature: <span> {{weathers$.main.temp_min}}&#176;</span> C / Max temperature <span>{{weathers$.main.temp_max}}&#176;</span> C</p>
+        <p>{{weathers$.weather[0].description}}</p>
+        <p>Clouds: <span>{{weathers$.clouds.all}}%</span></p>
+        <p>Humidity: <span>{{weathers$.main.humidity}}%</span></p>
+        <p>Sunrise at <span>{{weathers$.clouds.all| date:'HH:mm'}}</span> and Sunset at <span>{{weathers$.sys.sunset| date:'HH:mm'}}</span></p>
+        <p>Wind: <span>{{weathers$.wind.speed}}</span> m/s</p>
+        <p>Pressure: <span>{{weathers$.main.pressure}}</span> hPa</p>
+    </div>
+</ng-template>
